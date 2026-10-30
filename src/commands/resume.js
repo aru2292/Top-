@@ -1,0 +1,1 @@
+const {useQueue}=require("discord-player");module.exports={name:"resume",aliases:[],async execute({message}){const q=useQueue(message.guild.id);if(!q)return message.reply("Nothing is playing.");q.node.resume();return message.reply("▶️ Resumed.");}};

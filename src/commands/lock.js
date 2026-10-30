@@ -1,0 +1,1 @@
+const {PermissionsBitField}=require("discord.js");module.exports={name:"lock",aliases:[],async execute({message,hasMod}){if(!hasMod(message.member))return message.reply("❌ Manage Server permission required.");await message.channel.permissionOverwrites.edit(message.guild.roles.everyone,{SendMessages:false});return message.reply("🔒 Channel locked.");}};

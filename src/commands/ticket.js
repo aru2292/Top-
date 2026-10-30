@@ -1,0 +1,1 @@
+module.exports={name:"ticket",aliases:[],async execute({message}){return message.reply({content:"🎫 **TOP Support**\nPress the button to create a private support channel.",components:[{type:1,components:[{type:2,style:1,label:"Create ticket",custom_id:"top_ticket:create"}]}]});}};

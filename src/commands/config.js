@@ -1,0 +1,1 @@
+module.exports={name:"setlog",aliases:[],async execute({message,args,guildData,hasMod,client}){if(!hasMod(message.member))return message.reply("❌ Manage Server permission required.");const c=message.mentions.channels.first()||message.channel;guildData.logChannel=c.id;client.saveDB();return message.reply(`📋 Log channel set to ${c}.`);}};

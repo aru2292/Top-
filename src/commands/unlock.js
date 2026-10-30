@@ -1,0 +1,1 @@
+module.exports={name:"unlock",aliases:[],async execute({message,hasMod}){if(!hasMod(message.member))return message.reply("❌ Manage Server permission required.");await message.channel.permissionOverwrites.edit(message.guild.roles.everyone,{SendMessages:null});return message.reply("🔓 Channel unlocked.");}};

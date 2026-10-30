@@ -1,0 +1,1 @@
+const {useQueue}=require("discord-player");module.exports={name:"pause",aliases:[],async execute({message}){const q=useQueue(message.guild.id);if(!q)return message.reply("Nothing is playing.");q.node.pause();return message.reply("⏸️ Paused.");}};

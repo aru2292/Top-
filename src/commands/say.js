@@ -1,0 +1,1 @@
+module.exports={name:"say",aliases:[],async execute({message,args,hasMod}){if(!hasMod(message.member))return message.reply("❌ Manage Server permission required.");const text=args.join(" ");if(!text)return message.reply("Usage: `.say <message>`");await message.delete().catch(()=>{});return message.channel.send({content:text,allowedMentions:{parse:[]}});}};

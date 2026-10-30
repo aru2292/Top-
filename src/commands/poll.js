@@ -1,0 +1,1 @@
+module.exports={name:"poll",aliases:[],async execute({message,args}){const q=args.join(" ");if(!q)return message.reply("Usage: `.poll <question>`");const m=await message.channel.send(`📊 **Poll:** ${q}`);await m.react("👍");await m.react("👎");return;}};

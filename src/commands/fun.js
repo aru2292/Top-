@@ -1,0 +1,1 @@
+module.exports={name:"8ball",aliases:["eightball"],async execute({message,args}){if(!args.length)return message.reply("Ask me a question.");const a=["Absolutely.","It is certain.","Without a doubt.","Most likely.","Ask again later.","Cannot predict now.","Probably not.","No.","Very doubtful."];return message.reply(`🎱 ${a[Math.floor(Math.random()*a.length)]}`);}};

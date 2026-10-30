@@ -1,0 +1,1 @@
+module.exports={name:"setwelcome",aliases:[],async execute({message,guildData,hasMod,client}){if(!hasMod(message.member))return message.reply("❌ Manage Server permission required.");const c=message.mentions.channels.first()||message.channel;guildData.welcomeChannel=c.id;client.saveDB();return message.reply(`👋 Welcome channel set to ${c}.`);}};
